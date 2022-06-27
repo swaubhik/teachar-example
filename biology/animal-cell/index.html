@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plant cell</title>
+  </head>
+  <body>
+    <div class="grid overflow-hidden grid-cols-2 grid-rows-1 gap-3">
+      <div class="bg-slate-200">
+        <div class="p-3">
+          <h1 class="text-2xl font-bold">Plant cell</h1>
+          <p class="text-xl">A model of a plant cell.</p>
+        </div>
+      </div>
+      <div class="w-full h-screen">
+        <model-viewer
+          bounds="tight"
+          enable-pan
+          src="./animal-cell.glb"
+          ar
+          ar-modes="webxr scene-viewer quick-look"
+          camera-controls
+          environment-image="neutral"
+          poster="poster.webp"
+          shadow-intensity="1"
+        >
+          <button
+            class="Hotspot"
+            slot="hotspot-1"
+            data-position="0.6873463941928286m 2.1236107319017545m 0.2806799599462655m"
+            data-normal="0.7411794571747474m 0.22488187519478492m 0.6325196870224863m"
+            data-visibility-attribute="visible"
+          >
+            <div class="HotspotAnnotation">Nucleolus</div></button
+          ><button
+            class="Hotspot"
+            slot="hotspot-2"
+            data-position="0.28142268148685334m 2.708948840161907m 0.21974971839376103m"
+            data-normal="0.9616955913156638m -0.027314993519669303m 0.27275534966895937m"
+            data-visibility-attribute="visible"
+          >
+            <div class="HotspotAnnotation">Nucleus</div></button
+          ><button
+            class="Hotspot"
+            slot="hotspot-4"
+            data-position="3.3291922042931423m 1.5490240881720263m -0.9403800307058929m"
+            data-normal="-0.01086105979169125m -0.026922212886771803m 0.9995785270970364m"
+            data-visibility-attribute="visible"
+          >
+            <div class="HotspotAnnotation">Mitochondria</div></button
+          ><button
+            class="Hotspot"
+            slot="hotspot-5"
+            data-position="0.4085352467575092m 2.9766557988279185m -2.3584911786572436m"
+            data-normal="0.8896973953476953m -0.3150995073877452m 0.330379849802507m"
+            data-visibility-attribute="visible"
+          >
+            <div class="HotspotAnnotation">Lysosomes</div></button
+          ><button
+            class="Hotspot"
+            slot="hotspot-6"
+            data-position="0.03190421564236412m 3.9505262075661296m -0.27975725105982185m"
+            data-normal="0.003917411327539355m -0.07814780360291414m 0.9969340874303232m"
+            data-visibility-attribute="visible"
+          >
+            <div class="HotspotAnnotation">Golgi Apparatus</div></button
+          ><button
+            class="Hotspot"
+            slot="hotspot-7"
+            data-position="2.6876753512427594m 1.4910399999999981m -2.4130133413384014m"
+            data-normal="0m 0m 1m"
+            data-visibility-attribute="visible"
+          >
+            <div class="HotspotAnnotation">Ribosomes</div></button
+          ><button
+            class="Hotspot"
+            slot="hotspot-8"
+            data-position="-0.3075893409138657m 2.43236605574637m 1.3109035027785585m"
+            data-normal="0.9924066024482395m -0.11431954424612366m 0.0453891751467325m"
+            data-visibility-attribute="visible"
+          >
+            <div class="HotspotAnnotation">Peroxiome</div>
+          </button>
+          <div class="progress-bar hide" slot="progress-bar">
+            <div class="update-bar"></div>
+          </div>
+          <button slot="ar-button" id="ar-button">View in your space</button>
+          <div id="ar-prompt">
+            <img src="https://modelviewer.dev/shared-assets/icons/hand.png" />
+          </div>
+        </model-viewer>
+      </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

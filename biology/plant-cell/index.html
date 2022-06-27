@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plant cell</title>
+  </head>
+  <body>
+    <div class="grid overflow-hidden grid-cols-2 grid-rows-1 gap-3">
+      <div class="bg-slate-200">
+        <div class="p-3">
+          <h1 class="text-2xl font-bold">Plant cell</h1>
+          <p class="text-xl">A model of a plant cell.</p>
+        </div>
+      </div>
+      <div class="w-full h-screen">
+        <model-viewer
+          bounds="tight"
+          enable-pan
+          src="Plantcelll.glb"
+          ar
+          ar-modes="webxr scene-viewer quick-look"
+          camera-controls
+          environment-image="neutral"
+          poster="poster.webp"
+          shadow-intensity="1"
+        >
+          <button
+            class="Hotspot"
+            slot="hotspot-1"
+            data-position="19.509622899512944m 13.249484472098542m 1.246943962920917m"
+            data-normal="0.2931517294203535m 0.9001386865185776m 0.32219933049350946m"
+            data-visibility-attribute="visible"
+          >
+            <div class="HotspotAnnotation">Vacoule</div></button
+          ><button
+            class="Hotspot"
+            slot="hotspot-2"
+            data-position="45.036078496765455m -9.53646044774199m 22.387891703886766m"
+            data-normal="-1.7415177410296955e-10m 0.9999999996351239m 0.000027013925172081832m"
+            data-visibility-attribute="visible"
+          >
+            <div class="HotspotAnnotation">Amyloplast</div></button
+          ><button
+            class="Hotspot"
+            slot="hotspot-3"
+            data-position="-26.08685443237089m -9.624941479460954m 46.74929641064241m"
+            data-normal="9.111896017370143e-9m 0.99999281159119m 0.0037916706010566728m"
+            data-visibility-attribute="visible"
+          >
+            <div class="HotspotAnnotation">Mitochondria</div></button
+          ><button
+            class="Hotspot"
+            slot="hotspot-4"
+            data-position="-54.09876713155417m -9.630919041452911m 27.794906829716577m"
+            data-normal="-0.010671896632513169m 0.9999383527937219m 0.0030661432522586566m"
+            data-visibility-attribute="visible"
+          >
+            <div class="HotspotAnnotation">Cell Membrane</div></button
+          ><button
+            class="Hotspot"
+            slot="hotspot-5"
+            data-position="-73.0981994980042m -9.151848607406889m 35.186053295998875m"
+            data-normal="-0.006534160765555745m 0.9995613286237723m -0.028886935852892138m"
+            data-visibility-attribute="visible"
+          >
+            <div class="HotspotAnnotation">Cell Wall</div></button
+          ><button
+            class="Hotspot"
+            slot="hotspot-6"
+            data-position="14.015876725427518m 32.969809806564015m -29.50994387054915m"
+            data-normal="0m 0.009493186834838154m 0.9999549386865986m"
+            data-visibility-attribute="visible"
+          >
+            <div class="HotspotAnnotation">Chloroplast</div></button
+          ><button
+            class="Hotspot"
+            slot="hotspot-7"
+            data-position="-43.82001149923077m 3.9220441880653745m -17.43078440746256m"
+            data-normal="-0.9145129286732738m 0.28163310579873563m 0.2904288157321688m"
+            data-visibility-attribute="visible"
+          >
+            <div class="HotspotAnnotation">Nucleus</div>
+          </button>
+          <div class="progress-bar hide" slot="progress-bar">
+            <div class="update-bar"></div>
+          </div>
+          <button slot="ar-button" id="ar-button">View in your space</button>
+          <div id="ar-prompt">
+            <img src="https://modelviewer.dev/shared-assets/icons/hand.png" />
+          </div>
+        </model-viewer>
+      </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
